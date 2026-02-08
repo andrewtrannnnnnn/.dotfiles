@@ -1,0 +1,26 @@
+(include "variables.yuck")
+
+(defwidget bar []
+  (box :orientation "horizontal"
+    (workspaces)
+    (clock)))
+
+; center box
+(defwidget workspaces []
+  (box :class "workspaces"
+       :halign "center"
+    (for i in "[1, 2, 3, 4, 5, 6, 7, 8, 9]"
+      (button :onclick "hyprctl dispatch workspace ${i}" "${i}"))))
+
+; right box
+(defwidget cal []
+  (calendar :class "cal"
+            :day current_day
+            :year current_year))
+
+(defwidget clock []
+  (box :class "clock"
+       :halign "end"
+    (eventbox :onhover "./scripts/open_calendar"
+              :onhoverlost "./scripts/close_calendar"
+      (label :text current_time))))

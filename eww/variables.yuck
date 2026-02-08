@@ -1,0 +1,6 @@
+(defpoll battery_percentage :interval "15s" "./scripts/battery_percentage")
+(defpoll battery_status :interval "15s" "./scripts/battery_status")
+(defpoll current_time :interval "1s" "date '+%-I:%M %p'")
+(defpoll current_day :interval "1m" "date '+%d'")
+(defpoll current_month :interval "1m" "date '+%m'")
+(defpoll current_year :interval "1m" "date '+%y'")

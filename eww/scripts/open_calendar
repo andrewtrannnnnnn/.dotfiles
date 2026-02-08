@@ -1,0 +1,2 @@
+#!/bin/zsh
+eww open cal -c ~/.dotfiles/eww
