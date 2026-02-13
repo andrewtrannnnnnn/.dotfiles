@@ -1,2 +1,0 @@
-#!/bin/zsh
-eww close cal -c ~/.dotfiles/eww
