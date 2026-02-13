@@ -1,2 +1,14 @@
 #!/bin/zsh
-cat /sys/class/power_supply/BAT0/status
+battery_percentage=$(cat /sys/class/power_supply/BAT0/capacity)
+
+if [ $battery_percentage -gt 80 ]; then
+  echo ""
+elif [ $battery_percentage -gt 60 ]; then
+  echo ""
+elif [ $battery_percentage -gt 40]; then
+  echo ""
+elif [ $battery_percentage -gt 20]; then
+  echo ""
+elif [ $battery_percentage -gt 0 ]; then
+  echo ""
+fi
