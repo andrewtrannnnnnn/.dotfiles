@@ -1,2 +1,0 @@
-#!/bin/zsh
-hyprctl dispatch workspace $1
