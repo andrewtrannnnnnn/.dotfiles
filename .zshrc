@@ -1,2 +1,1 @@
-PRETTY_HOSTNAME="$(hostnamectl --pretty)"
-PROMPT="%F{green}%B%n@${PRETTY_HOSTNAME}%b%f %F{blue}%B%~%b%f "
+PROMPT="%F{2}%B%n@%m%b%f %F{4}%B%~%b%f "
