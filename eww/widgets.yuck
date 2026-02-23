@@ -3,10 +3,15 @@
 (defwidget bar []
   (box :class "bar"
        :orientation "horizontal"
-    (workspaces)
+    (left_box)
     (right_box)))
 
 ; left box
+(defwidget left_box []
+  (box :class "left-box"
+       :halign "start"
+    (workspaces)))
+
 (defwidget workspaces []
   (box :class "workspaces"
        :orientation "horizontal"
@@ -18,13 +23,13 @@
 
 ; right box
 (defwidget right_box []
-  (box :class "right_box"
+  (box :class "right-box"
        :halign "end"
     (battery_percentage)
     (clock)))
 
 (defwidget battery_percentage []
-  (label :class "battery_percentage"
+  (label :class "battery-percentage"
          :tooltip "${battery_percentage}%"
          :text "${battery_status}"))
 
