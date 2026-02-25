@@ -12,6 +12,7 @@ compinit
 # End of lines added by compinstall
 
 autoload -Uz vcs_info
+
 precmd() {
 	vcs_info
 }
@@ -24,3 +25,4 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]%m'
 
 setopt PROMPT_SUBST
 PROMPT='%F{green}%n@%M %F{blue}%~${vcs_info_msg_0_} %f%# '
+
