@@ -8,13 +8,15 @@ return {
       },
       "neovim/nvim-lspconfig",
     },
-    opts = {
-      ensure_installed = {
-        "lua_ls",
-        "ts_ls",
-        "texlab",
-      },
-    },
-  }
+    opts = function(_, opts)
+      return {
+        ensure_installed = {
+          "lua_ls",
+          "ts_ls",
+          "texlab",
+        },
+      }
+    end,
+  },
 }
 

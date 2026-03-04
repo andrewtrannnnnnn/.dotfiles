@@ -8,10 +8,10 @@ return {
         flavour = "macchiato",
         integrations = {
           cmp = true,
-          telescope = true
-        }
+          telescope = true,
+        },
       }
-    end
-  }
+    end,
+  },
 }
 
